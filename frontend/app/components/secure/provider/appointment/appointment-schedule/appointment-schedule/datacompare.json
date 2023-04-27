@@ -1,0 +1,129 @@
+{
+    {
+        "doctorId": "zoxg3Px6",
+        "fromDate": "2021-12-08T17:00:00.000Z",
+        "toDate": "2021-12-08T17:30:00.000Z",
+        "day": 3,
+        "duration": 30,
+        "repeatOn": "0",
+        "aptTotalCount": "",
+        "memo": null,
+        "phone": "5555555555",
+        "email": "dev@hellopatients.com",
+        "timeZone": 3,
+        "checkEligibility": false,
+        "patientInsuranceId": null,
+        "practicePatientTypeId": "64Q20wbn",
+        "practiceLocationId": "qlWXarbM",
+        "practiceServiceTypeId": "vQqR48W4",
+        "practiceAppointmentStatusCodeId": "n3WB8xog",
+        "practiceLocationRoomId": "95xGznbe",
+        "equipmentId": "N7xLyQz4",
+        "reasonForVisit": null,
+        "id": "3WBR6jWo"
+    },
+    {
+        "id": "qb1ZDvx3",
+        "firstName": "FirstName80",
+        "lastName": "LastName80",
+        "patientPhone": "5555555555",
+        "patientEmail": "dev@hellopatients.com",
+        "practiceServiceType": "Skin Trilogy",
+        "room": "Room 10",
+        "practiceLocation": "Memphis",
+        "appointmentStatusCode": "Booked",
+        "equipmentDescription": null,
+        "patientType": "Active",
+        "fromDate": "2021-12-14T23:00:00.000Z",
+        "toDate": "2021-12-14T23:30:00.000Z",
+        "patientId": "EvQqmYQ4",
+        "mrn": "80",
+        "email": null,
+        "memo": null,
+        "duration": 30,
+        "providerId": "dOxkopx9",
+        "doctorId": "arW4mNb7",
+        "patientInsuranceId": null,
+        "practiceLocationId": "qlWXarbM",
+        "practicePatientTypeId": "64Q20wbn",
+        "practiceLocationRoomId": "n3WBz7Wo",
+        "masterAppointmentTypeId": "3Mx8zWRD",
+        "practiceAppointmentStatusCodeId": "n3WB8xog",
+        "reasonForVisit": null,
+        "practiceServiceTypeId": "kbOo61b6",
+        "equipmentId": "N7xLyQz4",
+        "timeZone": "20",
+        "parentAptId": null,
+        "repeatOn": 0,
+        "aptCount": 0,
+        "aptTotalCount": 0,
+        "sequence": 7,
+        "checkEligibility": 0,
+        "eligibilityId": null,
+        "serviceTypeFillColour": "green",
+        "patientTypeBorderColour": "#5C7AEA",
+        "providerFirstName": "First",
+        "providerName": "Skin Body Memphis",
+        "providerPhone": "5555555555",
+        "providerEmail": "support@hellopatients.com",
+        "providerAddressLine1": "1 Street St",
+        "providerAddressLine2": "",
+        "providerCity": "Memphis",
+        "providerState": "TN",
+        "providerCountry": 1,
+        "providerPostalCode": "11111",
+        "fullName": " FirstName80 LastName80",
+        "isPopupOpen": false,
+        "start": "2021-12-05T23:00:00.000Z",
+        "end": "2021-12-05T23:30:00.000Z",
+        "title": "FirstName80 L.",
+        "draggable": true,
+        "toolTip": "4:30 PM-5:00 PM",
+        "fillColour": "#5C7AEA",
+        "borderColour": "green",
+        "popupText": "",
+        "resizable": {
+            "beforeStart": true,
+            "afterEnd": true
+        },
+        "doctor": {
+            "id": "arW4mNb7",
+            "doctorType": null,
+            "firstName": "Sam",
+            "lastName": "Colvin",
+            "mobile": "5555555555",
+            "email": "support@hellopatients.com",
+            "city": "Memphis",
+            "state": "TN",
+            "country": 1,
+            "npi": null,
+            "isRegistered": true,
+            "isActiveDoctor": true,
+            "name": "Sam Colvin",
+            "fullName": "S Colvin"
+        }
+    },
+    {
+    aptTotalCount: ""
+checkEligibility: false
+day: 1
+doctorId: "0rbd43b6"
+duration: "30"
+email: "jswaggerty@hellopatients.com"
+equipmentId: "N7xLyQz4"
+fromDate: "2021-12-06T18:15:00.000Z"
+memo: ""
+patientId: "95xGYDWe"
+patientInsuranceId: ""
+phone: "7736663435"
+practiceAppointmentStatusCodeId: "n3WB8xog"
+practiceLocationId: "qlWXarbM"
+practiceLocationRoomId: "6qb1PqW3"
+practicePatientTypeId: "64Q20wbn"
+practiceServiceTypeId: "lWaBkdb6"
+reasonForVisit: ""
+repeatOn: "0"
+timeZone: 3
+toDate: "2021-12-06T18:45:00.000Z"
+    }
+}

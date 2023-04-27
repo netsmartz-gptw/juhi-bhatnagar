@@ -1,0 +1,1242 @@
+:root {
+    --primary-color: #F36C21;
+    // --primary-rgb: rgb(27, 53, 137);
+    --primary-light: #FDECE3;
+    // --primary-dark: #0A1434;
+    --secondary-color: #6C757D ;
+    // --bs-primary-rgb: rgb(27, 52, 136) !important;
+    // --bs-secondary-rgb: rgb(27, 52, 136) ;
+}
+
+@import "login";
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200;400,500,700,900&display=swap");
+// @import "./assets/theme-styles/styles-themed.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css");
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@mixin custom($class) {
+    @extend .#{$class};
+}
+$app-font: "Poppins", sans-serif;
+
+.form-control,
+.form-select {
+    min-height: 38px !important;
+}
+// .btn {
+//     color: white !important;
+// }
+
+.login-loader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background-color: white !important;
+    @include custom(align-items-center);
+    @include custom(row);
+    @include custom(container-fluid);
+    @include custom(justify-content-center);
+    .segment {
+        // width: 30vw;
+        text-align: center;
+        @include custom(justify-content-center);
+        @include custom(card);
+        @include custom(p-5);
+        border: none;
+        :hover {
+            border: 0px;
+            box-shadow: none;
+        }
+        div {
+            @include custom(mt-5);
+            @include custom(mb-5);
+            @include custom(justify-content-center);
+            margin-left: auto !important;
+            margin-right: auto !important;
+            text-align: center;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .login-loader {
+        .card {
+            margin: 0px !important;
+            width: 100vw !important;
+            height: 100vh !important;
+        }
+    }
+}
+
+.accordion {
+    .card {
+        .btn {
+            @include custom(text-decoration-none);
+            @include custom(shadow-sm);
+            width: 100%;
+        }
+    }
+}
+
+.accordion-button:not(.collapsed)::after, .accordion-style-header:not(.collapsed)::after, th:not(.collapsed)::after, .table thead tr th:not(.collapsed)::after, .table .thead th:not(.collapsed)::after, .primary-header::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    transform: rotate(-180deg) !important;
+}
+
+.accordion-button::after, .accordion-style-header::after, th::after, .table thead tr th::after, .table .thead th::after{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+}
+
+.accordion-btn {
+    // font-family: var(--app-font);
+    display: inline-block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+
+input[type="text"],
+textarea,
+// input[type="select"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="datetime-local"] {
+    @include custom(form-control);
+    @include custom(col-sm-12);
+    // height: 37px !important;
+}
+input[type="submit"],
+input[type="button"],
+input[type="rest"] {
+    @include custom(btn);
+    @include custom(btn-primary);
+}
+
+.scroll-list {
+    overflow-y: auto !important;
+    overflow-x: clip !important;
+}
+
+.btn-primary {
+    color: white !important;
+}
+
+.btn-clear {
+    @include custom(text-secondary);
+}
+
+label {
+    font-weight: 400;
+    display: block;
+    margin: 0 0 0.28571429rem 0;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 0.92857143em;
+    text-transform: none;
+    font-family: var(--bs-body-font-family);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @include custom(mt-2);
+    .form-check-label {
+        margin-top: 0px;
+    }
+}
+.accordion-header {
+    display: inline-block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    // text-decoration: none !important;
+    vertical-align: middle;
+    // cursor: pointer;
+    // @include custom(py-2);
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+.accordion-style-header {
+    @include custom("accordion-button");
+    // @include custom("accordion-button:not(.collapsed)");
+    // line-height: inherit;
+    min-height: 50px;
+    max-height: auto;
+    height: auto;
+    // // background-color: #fff0e6 !important;
+    // box-shadow: inset 0 -1px 0 rgb1(0, 0, 0, 13%);
+    width: 100%;
+    // font-weight: 400;
+    // line-height: 1.5;
+    // color: var(--primary-color) !important;
+    color: black;
+    // text-align: left;
+    // vertical-align: middle !important;
+    min-width: min-content;
+    // @include custom(py-2);
+    // -webkit-user-select: none;
+    // user-select: none;
+    // background-color: transparent;
+    // border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    ::after {
+        background-image: none !important;
+    }
+}
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color) !important
+}
+.accordion-style-header:not(.collapsed)::after {
+    background-image: none !important;
+}
+.accordion-style-header:not(.collapsed){
+    background-color: var(--primary-light) !important;
+}
+.pill {
+    @include custom(bg-primary);
+    @include custom(text-white);
+    padding: 2px 5px;
+    max-width: max-content;
+    border-radius: 5px;
+}
+
+.inline {
+    @include custom(d-flex);
+    @include custom(row);
+}
+
+.day-tile {
+    @include custom(bg-transparent);
+    aspect-ratio: 1/1;
+    padding: 3px;
+    abbr {
+        float: right;
+    }
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.rbc-time-gutter .rbc-time-column {
+    z-index: -1 !important;
+}
+
+.ui.small.modal.visible.active {
+    @include custom(card);
+}
+
+.event-tooltip {
+    span {
+        display: block;
+    }
+}
+
+.nav-link {
+    font-size: 12px;
+}
+
+@media (max-width: 992px) {
+    .hidden-lg-mobile {
+        display: none;
+    }
+}
+@media (min-width: 992px) {
+    .show-lg-mobile {
+        display: none;
+    }
+}
+.navbar-wrap {
+    height: 15vh !important;
+    max-height: 15vh !important;
+}
+
+.navbar {
+    // height: auto !important;
+}
+
+.main-navbar {
+    height: 65px !important;
+}
+
+.dropdown-menu {
+    left: inherit !important;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    // font-weight: bold;
+}
+a:hover{
+    color: var(--primary-color) !important;
+    font-style: italic !important;
+}
+
+.top-right {
+    top: 12px;
+    right: 12px;
+    transition: transform 0.6s ease-in-out;
+    animation: toast-in-right 0.7s;
+}
+
+.bottom-right {
+    bottom: 12px;
+    right: 12px;
+    transition: transform 0.6s ease-in-out;
+    animation: toast-in-right 0.7s;
+}
+
+.top-left {
+    top: 12px;
+    left: 12px;
+    transition: transform 0.6s ease-in;
+    animation: toast-in-left 0.7s;
+}
+
+.bottom-left {
+    bottom: 12px !important;
+    left: 12px !important;
+    transition: transform 0.6s ease-in !important;
+    animation: toast-in-left 0.7s;
+}
+
+.notification {
+    position: fixed !important;
+    min-height: 50px;
+    // height: 50px !important;
+    min-width: 500px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    position: fixed;
+    z-index: 15;
+}
+
+.credit.card {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.rbc-time-header-content:nth-child(odd) {
+    background-color: var(--primary-light) !important;
+}
+
+.rbc-time-header-content:nth-child(even) {
+    @include custom(bg-light);
+}
+
+.modal {
+    height: auto !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+    // width: auto !important;
+    top: auto !important;
+    margin-top: 10vh !important;
+    left: auto !important;
+    padding: 0px !important;
+    z-index: 10000 !important;
+    overflow: unset !important;
+}
+
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header {
+    font-family: $app-font;
+}
+
+.accordion-header {
+    // @include custom("accordion-button:not(.collapsed)");
+    // @include custom("p-5");
+    // line-height: inherit;
+    // // display: block;
+    // min-height: 50px;
+    // max-height: auto;
+    // height: auto;
+    // color: var(--primary-color);
+    // background-color: #fff0e6 !important;
+    // box-shadow: inset 0 -1px 0 rgb1(0, 0, 0, 13%);
+    // font-family: $app-font;
+    @include custom("m-0");
+    @include custom("p-0");
+}
+
+.accordion-button {
+    // @include custom("primary-header");
+    font-family: var(--bs-body-font-family) !important;
+    // color: var(--primary-color) !important;
+    color: var(--primary-color);
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    font-size: 1rem !important;
+}
+
+.accordion-btn {
+    min-height: 50px;
+    max-height: auto;
+    height: auto;
+}
+
+.nav-image {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    background-size: cover;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+    span{
+        i{
+            color: white !important;
+        }
+    }
+}
+
+.view-pw {
+    margin-left: -1.9rem !important;
+    margin-top: 0.7rem;
+    cursor: pointer;
+}
+
+.ui.dimmer {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.ui.header {
+    color: var(--page-title) !important;
+    font-family: $app-font;
+    font-weight: 350;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--page-title) !important;
+    font-family: $app-font;
+    font-weight: 350;
+}
+
+.table > :not(:first-child) {
+    border-top: none !important;
+}
+
+td:nth-child(n) {
+    margin-top: auto !important;
+}
+
+.ui.ribbon.label {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-light) !important;
+}
+
+.field.required {
+    label::after {
+        margin: -0.2em 0 0 0.2em;
+        content: "*";
+        color: #db2828;
+    }
+}
+
+.btn-primary {
+    // background-color: var(--primary-color) !important;
+}
+
+i {
+    display: flex;
+    span {
+        align-self: center;
+        right: 5px;
+    }
+}
+
+.list {
+    overflow-x: none !important;
+}
+
+.pagination {
+    display: inline-flex !important;
+    width: 100%;
+}
+
+
+.highlight {
+    background-color: var(--primary-color);
+}
+
+body {
+    @include custom(bg-light);
+}
+
+// .notification {
+//     height: inherit;
+// }
+
+@media (max-width: 576px) {
+    .col-xs {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-sm {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-md {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .col-lg {
+        display: none;
+    }
+}
+.tile-range {
+    background-color: var(--primary-color);
+}
+
+.input-group-text-clear {
+    // @include custom(input-group-text);
+    position: relative;
+    left: -25px;
+    top: 5px;
+    height: min-content;
+    border-left: 0px !important;
+    background-color: white;
+}
+
+th {
+    // @include custom("primary-header");
+    @include custom("accordion-button");
+    display: table-cell !important;
+    color: var(--primary-color) !important;
+    // border: 1px black solid !important;
+    width: auto !important;
+    // background-image: none !important;
+    .sortable {
+        color: var(--primary-color) !important;
+    }
+}
+
+.table {
+    @include custom(table-responsive);
+    thead {
+        tr {
+            color: var(--primary-color) !important;
+            width: auto !important;
+            th {
+                @include custom("accordion-button");
+                display: table-cell !important;
+                width: auto !important;
+            }
+        }
+    }
+    tbody {
+        tr {
+            width: auto !important;
+            td {
+                display: table-cell !important;
+                width: auto !important;
+            }
+        }
+    }
+    .thead {
+        color: var(--primary-color) !important;
+        width: auto !important;
+        th {
+            @include custom("accordion-button");
+            display: table-cell !important;
+            width: auto !important;
+            @include custom("py-2");
+        }
+        th:hover {
+            z-index: unset;
+        }
+    }
+}
+
+.accordion-button {
+    color: unset !important;
+}
+
+// .accordion-button:not(:focus){
+//    color: red !important;
+// }
+.accordion-button:not(.collapsed) {
+    // color: var(--primary-color) !important;
+    color: black !important;
+}
+.primary-header:not(.collapsed) {
+    // color: var(--primary-color) !important;
+ color: black !important;
+}
+.primary-header {
+    @include custom("accordion-button:not(.collapsed)");
+    line-height: inherit;
+    min-height: 50px;
+    max-height: auto;
+    height: auto;
+    background-color: var(--primary-color) !important;
+    box-shadow: inset 0 -1px 0 rgb1(0, 0, 0, 13%);
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    // color: var(--primary-color) !important;
+    color:black !important;
+    text-align: left;
+    vertical-align: middle !important;
+    min-width: min-content;
+    @include custom(py-2);
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+// React select with classname
+.react-select-container {
+    @include custom(form-control);
+    @include custom(p-0);
+    border: none !important;
+}
+
+.react-select__input-container {
+    margin: 0px !important;
+    padding: 0px !important;
+    max-height: 30px;
+    // @include custom(form-control);
+    border: none !important;
+    input {
+        margin: 0px !important;
+        padding: 0px !important;
+        max-height: 30px;
+    }
+}
+
+.react-select--is-disabled {
+    @include custom(form-control);
+    @include custom(p-0);
+    border: none !important;
+}
+
+.react-select__control {
+    @include custom(p-0);
+    @include custom(m-0);
+    // border-color: var(--primary-color);
+}
+.react-select__control:hover {
+    // @include custom(bg-warning);
+}
+.react-select__control--is-focused {
+    // @include custom(bg-light);
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 1px rgba(var(--primary-color),25%) !important;
+    @include custom(p-0);
+    @include custom(m-0);
+}
+.react-select__control--is-disabled {
+    background-color: white !important;
+    @include custom(p-0);
+    @include custom(m-0);
+    border: none !important;
+    .react-select__indicators {
+        display: none !important;
+    }
+}
+.react-select__single-value--is-disabled {
+    color: black !important;
+    @include custom(p-0);
+    @include custom(m-0);
+}
+.react-select__control--menu-is-opened {
+    // @include custom(bg-dark);
+}
+.react-select__value-container {
+}
+.react-select__indicators {
+}
+
+.react-select__menu {
+    // @include custom(bg-danger);
+}
+.react-select__menu-list {
+}
+
+.react-select__option:hover {
+    background-color: var(--primary-light) !important;
+    color: var(--primary-color);
+}
+.react-select__option--is-selected {
+    background-color: var(--primary-color) !important;
+}
+.react-select__option--is-focused {
+    background-color: var(--primary-light) !important;
+    color: var(--primary-color);
+}
+
+.react-select__dropdown-indicator,
+.react-select__indicator {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.css-*-option {
+    background-color: var(--primary-color) !important;
+}
+input:disabled[type="checkbox"] {
+    background-color: var(--secondary-color);
+    color: black;
+    border-color: var(--secondary-color);
+    
+}
+
+.form-check-input[disabled], .form-check-label:disabled {
+    opacity: 1 !important;
+}
+
+
+.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label{
+    opacity: 1 !important;
+}
+input:disabled[type="select"],
+input:disabled[type="text"],
+input:disabled[type="email"],
+input:disabled[type="password"],
+input:disabled[type="number"] {
+    background-color: transparent;
+    border: none;
+}
+
+/* Hide HTML5 Up and Down arrows. */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield !important;
+}
+
+.ui.warning.message {
+    @include custom(text-dark);
+    @include custom(bg-light);
+}
+
+.nav-link.menu-link,
+.navbar-brand {
+    border-color: var(--primary-color);
+    i {
+        color: white !important;
+    }
+    span {
+        font-size: 14px !important;
+        color: white !important;
+    }
+    span:hover {
+        font-weight: heavy;
+    }
+}
+.nav-tabs .nav-link.disabled {
+    // background-color: #afafaf !important;
+}
+.nav-item .nav-link.disabled {
+    color: black !important;
+}
+
+.nav-image:focus-visible {
+    outline: none !important;
+}
+
+
+
+.max-w-lg {
+    max-width: 1200px !important;
+}
+
+.icon-item {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.ui.selection.dropdown .menu > .item {
+    @include custom(btn);
+    @include custom(btn-primary);
+    i {
+        margin: 0px !important;
+        padding: 0px !important;
+        color: white;
+    }
+}
+
+.text-white:nth-child(n) {
+    color: white !important;
+}
+
+
+th.sortable.desc {
+    background-image: none !important;
+}
+th.sortable.asc {
+    background-image: none !important;
+}
+th.sortable.desc::before {
+    margin: -0.2em 0 0 0.2em;
+    content: "↓ ";
+    color: var(--primary-color);
+    background-image: none !important;
+}
+th.sortable.asc::before {
+    margin: -0.2em 0 0 0.2em;
+    content: "↑ ";
+    color: var(--primary-color);
+    background-image: none !important;
+}
+
+.w-auto {
+    width: auto !important;
+}
+
+@media (max-width: 768px) {
+    .m-1-5 {
+        transform: scale(1.5);
+    }
+}
+
+.appframe {
+    @include custom(p-5);
+    @include custom(pt-0);
+    @include custom(bg-light);
+}
+@media (max-width: 768px) {
+    .appframe {
+        padding: 1px !important;
+        padding-bottom: 10px !important;
+    }
+    .row {
+        margin: 1px;
+        padding: 1px;
+    }
+}
+.invoice {
+    aspect-ratio: 11/8.5;
+    width: 8.5in !important;
+    height: 11in !important;
+    padding: 10px !important;
+}
+
+.bank-marker {
+    @include custom(bg-white);
+    @include custom(text-secondary);
+    @include custom(p-1);
+    @include custom(me-1);
+    border-radius: 3px;
+}
+
+.colorpick-eyedropper-input-trigger {
+    display: none !important;
+}
+
+.corner-note-faded {
+
+    position: relative;
+    // border: none !important;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-light);
+    border-radius:0px 26px 0px 0px;
+    hr{
+        border: 1px solid var(--primary-color);
+        background-color: var(--primary-color);
+    }
+}
+
+.corner-note-faded:after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 0px;
+    height: 0px;
+    border-bottom: 15px solid var(--primary-color);
+    border-right: 15px solid white; /*Set to background color, not transparent!*/
+
+}
+.corner-note {
+    position: relative;
+    border: none !important;
+}
+
+.corner-note:after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 0px;
+    height: 0px;
+    border-bottom: 15px solid #eee;
+    border-right: 15px solid white; /*Set to background color, not transparent!*/
+}
+
+.point {
+    cursor: pointer !important;
+}
+
+.float-right {
+    float: right !important;
+}
+.float-left {
+    float: left !important;
+}
+
+.ui.input > input:focus {
+    @include custom(form-control);
+}
+
+.bg-faded {
+    background-color: var(--primary-light) !important;
+}
+
+.b-1 {
+    border: 1px solid var(--primary-color) !important;
+    border-radius: 0.25rem !important;
+}
+.b-secondary-1 {
+    border: 1px solid var(--secondary-color) !important;
+    border-radius: 0.25rem !important;
+}
+
+.form-alert {
+    @include custom(bg-faded);
+    @include custom(text-primary);
+    @include custom(p-1);
+    @include custom(b-1);
+}
+
+span.disabled {
+    // color: darken(var(--primary-color), 10) !important;
+}
+
+.ui.fullscreen.modal {
+    left: unset !important;
+}
+
+.modal-header {
+    text-align: center !important;
+    @include custom(bg-faded);
+    @include custom(d-flex);
+    @include custom(align-items-center);
+    .modal-title {
+        @include custom(text-primary);
+        @include custom(text-center);
+        width: 100% !important;
+    }
+    width: 100% !important;
+    margin: 0px;
+}
+
+.navbar {
+    padding: 0px !important;
+    height: 10vh !important;
+}
+
+// label ~ input:focus,
+// label ~ input:valid {
+//     // top: -20px !important;
+//     // font-size: 12px;
+//     color: var(--primary-color);
+//     // position: relative;
+//     transform: translateY("-24px" scale(.75) );
+// }
+
+// label ~ input {
+//     // top: 20px !important;
+//     // font-size: 12px;
+//     color: var(--primary-color) !important;
+//     // position: relative;
+//      transform: translateY("-24px" scale(.75) );
+// }
+// input, label {
+//     transform-origin: top left;
+// }
+
+.w-100px {
+    width: 100px !important;
+    display: inline-block !important ;
+}
+.w-150px {
+    width: 150px !important;
+    display: inline-block !important ;
+}
+
+.pagebreak {
+    // page-break-after: always !important;
+}
+#as-react-datatable-table-head {
+    @include custom(d-flex);
+    @include custom(row);
+    @include custom(justify-content-between);
+    @include custom(align-items-center);
+}
+
+.asrt-page-length{
+    @include custom(d-flex);
+    @include custom(justify-content-between);
+    @include custom(align-items-center) 
+}
+
+#as-react-datatable-table-head > div {
+    @include custom(col-auto);
+}
+#as-react-datatable-table-head  > :last-child{
+           @include custom(d-flex);
+           @include custom(justify-content-end);
+           @include custom(align-items-center);
+        //    @include custom(row)
+}
+#as-react-datatable-table-foot {
+    @include custom(d-flex);
+    @include custom(row);
+    @include custom(justify-content-between);
+    @include custom(align-items-end)
+}
+
+#as-react-datatable-table-foot > div {
+    @include custom(col-auto);
+}
+
+.truncate {
+    @include custom(d-inline-block);
+    @include custom(text-truncate)
+}
+.requirement-text, .error-message {
+    color: var(--primary-color);
+    font-size: smaller;
+}
+
+.formio-dialog {
+    @include custom(modal)
+}
+
+//Bootstrap color updates
+
+.bg-primary, .pill, .react-calendar__navigation, .react-calendar__tile--hasActive, .react-calendar__tile--active {
+    background-color: var(--primary-color) !important;
+}
+.btn-secondary, .rbc-toolbar button{
+    background-color: var(--secondary-color)!important;
+    border-color: var(--secondary-color) !important;
+}
+.text-secondary {
+    color: var(--secondary-color) !important;
+    font-weight: bold !important;
+}
+
+.accordion-button:not(.collapsed), .accordion-style-header:not(.collapsed), th:not(.collapsed), .table thead tr th:not(.collapsed), .table .thead th:not(.collapsed), .primary-header {
+background-color: var(--primary-light) !important;
+}
+
+.btn-primary, input[type="submit"], input[type="button"], input[type="rest"], .ui.selection.dropdown .menu > .item, .rbc-toolbar button:active, .rbc-toolbar button.rbc-active, .rbc-toolbar button:focus, .react-calendar__navigation button {
+background-color: var(--primary-color) !important;
+color: white !important;
+border-color: var(--primary-color) !important;
+span{
+    i{
+        color: white !important;
+    }
+}
+}
+
+.text-primary, .form-alert, .modal-header .modal-title{
+    color: var(--primary-color) !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.nav-link {
+    color: var(--primary-color) !important;
+    font-weight: normal !important;
+}
+
+input[type="text"]:focus,
+.form-select:focus {
+    border-color: var(--primary-color)!important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(var(--primary-rgb),25%)!important;
+}
+
+.terms-condition-section {
+    .wrap-login100 {
+        min-width: 80% !important;
+    }
+}
+
+
+// Fix for Modal on Form 
+body.dimmable>.dimmer {
+    position: fixed !important;
+}
+.dimmed.dimmable>.ui.animating.dimmer, .dimmed.dimmable>.ui.visible.dimmer, .ui.active.dimmer{
+    display: flex !important;
+}
+.visible.transition {
+    display: block !important;
+}
+
+.formio-dialog{
+    z-index: 11000 !important;
+    display:block !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    background-color: rgba(0, 0, 0, 0.35);
+    .formio-dialog::after{
+        box-sizing: border-box!important; 
+    }
+}
+
+.formio-dialog-content{
+    background-color: white;
+    display:block !important;
+    top: 10vh !important;
+    left: 10vw !important;
+    height: 80vh !important;
+    width: 80vw !important;
+}
+
+.page-item.active .page-link{
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.page-item:not(active) .page-link{
+    color: var(--primary-color) !important;
+}
+
+.nav-link.menu-link:hover,
+.nav-link.menu-link.active {
+    transition: all 250ms ease-in-out;
+    background-color: var(--primary-color) !important;
+    filter:saturate(2) !important;
+    height: 10vh !important;
+    display: grid;
+    place-items: center !important;
+    position: relative !important;
+}
+// .text{
+//     color:#e2cbff
+// }
+@media (max-width: 576) {
+    .p-3 {
+        padding: 1.5px !important
+    }
+    .w-150px {
+        width: 100% !important;
+    }
+    .g-4 {
+        --bs-gutter-y: .75rem !important;
+    }
+    .table_tools, .table_filter {
+        margin-top: 3px !important;
+    }
+}
+
+// .table_filter {
+//     @include custom(col-lg);
+//     // @include custom(col-12);
+// }
+
+// .table_tools{
+//     @include custom(col-lg-auto);
+//     // @include custom(col-12);
+//     @include custom(d-flex);
+//     @include custom(justify-content-center);
+// }
+
+@media (max-width: 576px) {
+    .not-mobile {
+        display: none !important;
+    }
+    .not-mobile-rotate{
+        display: none !important;
+    }
+}
+@media (min-width: 577px) {
+    .mobile {
+        display: none !important;
+    }
+    .mobile-rotate{
+        display: none !important;
+    }
+}
+
+.warning{
+    background-color: var(--primary-light) !important;
+    color: var(--primary-color) !important;
+    padding: 5px !important;
+    border-radius: 5px !important;
+    border: 1px solid var(--primary-color);
+    // box-shadow: inset 0 2px 1px 0px  rgba(0, 0, 0, 0.35) !important;
+    -webkit-box-shadow: 2px 1px 2px 1px var(--primary-light);
+}
+
+.appointment-style{
+    justify-content: left !important;
+    padding-left: 30px;
+}
+
+@media screen and (orientation: landscape) {
+    .wrap-login100{
+
+        .logo-center {
+            width: 50% !important;
+        }
+    }
+}
+.bg-primary-light{
+    background-color: var(--primary-light) !important;
+}

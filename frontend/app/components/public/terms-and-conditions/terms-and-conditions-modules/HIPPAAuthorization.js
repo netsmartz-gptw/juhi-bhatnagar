@@ -1,0 +1,16 @@
+import React from 'react'
+const HIPPAAuthorization = () => {
+    return (
+        <div className='scroll-list' style={{ height: '20vh' }}>
+            <small>
+                <p>PLEASE READ THIS Authorization CAREFULLY BEFORE CLICKING THE “I AGREE” BUTTON BELOW. BY CLICKING “I AGREE”, YOU AGREE TO BE BOUND BY THE TERMS OF THIS Authorization. CLICKING THE AGREE BUTTON IS A LEGALLY VALID WAY TO CREATE A BINDING CONTRACT AND CONSTITUTES YOUR ELECTRONIC SIGNATURE TO THIS Authorization. IF YOU DO NOT AGREE TO THE TERMS OF THIS Authorization, PRESS “I DO NOT AGREE”, IN WHICH CASE YOU MAY NOT ACCESS OR OTHERWISE USE THE SERVICES. You represent and warrant that you have full power and authority to enter into, deliver and carry out the terms of this Authorization.</p>
+                <p>Pursuant to Health Insurance Portability and Accountability Act ("HIPAA") Standards for Privacy of Individually Identifiable Health Information, I hereby authorize Real Patient Solutions, Inc. d/b/a HelloPatients ("HelloPatients") to use and disclose my protected health information as described below. HelloPatients is hereby authorized to use and disclose my protected health information, including without limitation identifiable information, billing records, financial information and my records that are provided to HelloPatients by my healthcare providers and/or their business associates to communicate to me the marketing messages received from companies that remit payment to HelloPatients to perform marketing services to encourage me to purchase products or services ("Vendors"). The disclosure of my information will be to HelloPatients personnel for the purposes of delivering the marketing messages to me. HelloPatients will directly receive payment from the Vendors to provide the marketing messages to me.</p>
+                <p>HelloPatients will not disclose my protected health information to the Vendors that remit payment to HelloPatients for marketing of the Vendors' products.</p>
+                <p>Federal and state laws protect the information disclosed pursuant to this Authorization. I understand that if the authorized recipient of the information is not a health care provider or health plan covered by federal privacy regulations, the information may be re-disclosed and no longer protected. This authorization will expire in twelve (12) months.</p>
+                <p>I understand that I am waiving my right to privacy and this information may be disclosed by the recipient. I understand that I have the right to revoke this Authorization at any time, and in order to do so, I must present a written revocation to HelloPatients at <a href="mailto:Craig@hellopatients.com">Craig@HelloPatients.com</a>. I understand that the revocation will not apply to information that already has been released in response to or in reliance upon this Authorization. I understand that I need not sign this Authorization in order to ensure health care treatment, payment, enrollment in my health plan, or eligibility benefits. I understand that I may receive a copy of this Authorization form, after signing it.</p>
+            </small>
+        </div>
+    )
+}
+
+export default HIPPAAuthorization

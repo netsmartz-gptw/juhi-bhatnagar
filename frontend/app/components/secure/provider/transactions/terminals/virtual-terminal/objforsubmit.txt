@@ -1,0 +1,8 @@
+{
+    "paymentAccountId": "EvQqOYb4",
+    "channelType": 3,
+    "cvv": "998",
+    "email": "stephentester23@gmail.com",
+    "remarks": "Thank you for your business!",
+    "providerId": "n3WB8xog"
+}
